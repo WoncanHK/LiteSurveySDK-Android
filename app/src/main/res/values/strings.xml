@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">deviceHKJitpack</string>
+    <string name="search">Search</string>
 </resources>
