@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">LiteSurveySDKDemo</string>
+    <string name="scan">Scan</string>
+    <string name="laser">Laser</string>
+    <string name="zda">ZDA</string>
+    <string name="gst">GST</string>
+    <string name="vtg">VTG</string>
+    <string name="rmc">RMC</string>
+    <string name="gsv">GSV</string>
+    <string name="gga">GGA</string>
+    <string name="gsa">GSA</string>
+    <string name="rtcm">RTCM</string>
+    <string name="ntrip">Ntrip</string>
+    <string name="address">IP / Address</string>
+    <string name="port">Port</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="mountpoint">Mountpoint</string>
+    <string name="get_mountpoint">Get Mountpoint</string>
+    <string name="startntripconnection">startNtripConnection</string>
+    <string name="device_location">latitude:%.8f\nlongitude:%.8f\naltitude:%.3f\nfixStatus:%s</string>
+    <string name="device_information">Device Information</string>
+    <string name="device_id">Device ID</string>
+    <string name="latitude">Latitude</string>
+    <string name="longitude">Longitude</string>
+    <string name="altitude">Altitude</string>
+    <string name="fix_status">Fix Status</string>
+    <string name="battery_percentage">Battery Percentage</string>
+    <string name="ntrip_account">Ntrip Account</string>
+    <string name="nmea_output">NMEA Output</string>
+    <string name="rtcm_output">RTCM Output</string>
+    <string name="peripherals">Peripherals</string>
+    <string name="imu">IMU</string>
+    <string name="firmware_upgrade">Firmware Upgrade</string>
+    <string name="query">Query</string>
+
+</resources>
