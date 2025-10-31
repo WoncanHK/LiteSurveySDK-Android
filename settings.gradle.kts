@@ -11,15 +11,19 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
+
+plugins {
+    id("org.gradle.toolchains.foojay-resolver-convention") version "0.8.0"
+}
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
         mavenCentral()
-        mavenLocal()
-        maven { url 'https://jitpack.io' }
+//        mavenLocal()
+        maven("https://jitpack.io")
     }
 }
 
 rootProject.name = "LiteSurveySDKGithub"
-include ':app'
+include(":app")

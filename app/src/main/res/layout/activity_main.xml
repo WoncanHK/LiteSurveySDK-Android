@@ -345,34 +345,7 @@
         app:layout_constraintStart_toStartOf="@+id/textView10"
         app:layout_constraintTop_toBottomOf="@+id/switch_gsa" />
 
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="@string/peripherals"
-        android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
-        app:layout_constraintStart_toStartOf="@+id/switch_rtcm"
-        app:layout_constraintTop_toBottomOf="@+id/switch_rtcm" />
 
-    <com.google.android.material.materialswitch.MaterialSwitch
-        android:id="@+id/switch_laser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/laser"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
-
-    <com.google.android.material.materialswitch.MaterialSwitch
-        android:id="@+id/switch_imu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:text="@string/imu"
-        app:layout_constraintStart_toEndOf="@+id/switch_laser"
-        app:layout_constraintTop_toTopOf="@+id/switch_laser" />
 
     <TextView
         android:id="@+id/textView12"
@@ -381,7 +354,7 @@
         android:text="@string/firmware_upgrade"
         android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
         app:layout_constraintBottom_toBottomOf="@+id/btn_query_firmware"
-        app:layout_constraintStart_toStartOf="@+id/textView11"
+        app:layout_constraintStart_toStartOf="@+id/textView10"
         app:layout_constraintTop_toTopOf="@+id/btn_query_firmware" />
 
 
@@ -393,7 +366,7 @@
         android:layout_marginEnd="16dp"
         android:text="@string/query"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/switch_laser" />
+        app:layout_constraintTop_toBottomOf="@+id/switch_rtcm" />
 
     <TextView
         android:id="@+id/tv_firmware_info"

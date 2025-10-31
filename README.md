@@ -1,5 +1,7 @@
 # LiteSurvey SDK Demo for Android
-[![Maven Central](https://img.shields.io/maven-central/v/com.woncan.litesurvey/litesurvey.svg)](https://central.sonatype.com/artifact/com.woncan.litesurvey/litesurvey/)
+
+[![Maven Central](https://img.shields.io/maven-central/v/com.woncan.litesurvey/sdk.svg)](https://central.sonatype.com/artifact/com.woncan.litesurvey/sdk/)
+
 [![License: Apache-2.0 (shields.io)](https://img.shields.io/badge/License-Apache--2.0-c02041?logo=apache)](https://www.apache.org/licenses/LICENSE-2.0)
 
 This demo project shows how to use the LiteSurvey SDK to connect to Woncan LiteSurvey devices.
@@ -29,27 +31,17 @@ This SDK is published to Maven Central. The following link explains how to add i
 
 ```
 dependencies {
-    implementation "com.woncan.litesurvey:litesurvey:1.0.0_beta"
-    // replace "1.0.0_beta" with any available version
+    implementation("com.woncan.litesurvey:sdk:2.0.0")
+    // replace "2.0.0" with any available version
 }
 ```
-
 
 **Method 2 - Add AAR Library**
 
 You can download the AAR library file under "Releases" and add it manually to your project.
 
-### 2. Adding scanning activity in manifest
 
-In your application's AndroidManifest.xml file, add the following activity.
-
-```
-        <activity
-            android:name="com.woncan.litesurvey.deviceInterface.ScanActivity"
-            android:exported="false"/>
-```
-
-### 3. Scanning for devices
+### 2. Scanning for devices
 
 For Bluetooth devices, use the `LiteSurveyDeviceScanner.startBluetoothScan`method to start scanning. Android system will launch the companion device pairing dialog and guide the user through the Bluetooth connection process.
 
@@ -57,39 +49,37 @@ For USB devices,  use the `LiteSurveyDeviceScanner.startUsbSerialScan`method ins
 
 The combined `LiteSurveyDeviceScanner.startScan` method will first scan for USB devices and, if no USB devices are found, scan for Bluetooth devices.
 
-### 4. Receive device data (e.g. location)
+### 3. Receive device data (e.g. location)
 
 You will need a listener implementing LiteSurveyDeviceListener to receive device data. Register the listener as you call any of the scanning methods in LiteSurveyDeviceScanner.
 
-### 5. Configuring devices (optional)
+### 4. Configuring devices (optional)
 
 Use the `LiteSurveyDevice` interface to configure the device.
-
-
 
 ### Code example
 
 The following code snippet is a minimal code example in Kotlin that
 
 1. Scans for and connect to LiteSurvey devices.
-3. Prints the location information reported by the device to Logcat.
+2. Prints the location information reported by the device to Logcat.
 
 ```kotlin
 // Import LiteSurvey packages as needed
-import com.woncan.litesurvey.scan.LiteSurveyDeviceScanner
+import com.woncan.litesurvey.deviceInterface.LiteSurveyDeviceScanner
 import com.woncan.litesurvey.listener.LiteSurveyDeviceListener
 import com.woncan.litesurvey.data.LiteSurveyLocation
 
 // Start scanning (via USB and Bluetooth)
 LiteSurveyDeviceScanner.startScan(context , object : LiteSurveyDeviceListener() {
-	 
-    // Location information callback
+
+	// Location information callback
 	override fun onLocationChanged(location : LiteSurveyLocation) {
 		// Output latitude and longitude to Logcat
 		Log.i(TAG,"onLocationChanged: ${location.getLatitude()}  ${location.getLongitude()}")
 	}
-    // Add other callbacks here as necessary
-	
+	// Add other callbacks here as necessary
+
 })
 ```
 
@@ -122,12 +112,12 @@ Table: LiteSurvey SDK support for system Location class parameters
 
 LiteSurvey SDK declares the following permission(s) in its AndroidManifest.xml file.
 
-
 ```
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
 ```
 
 ## Contact email
 
 For technical or business inquiries, please contact support@woncan.com.hk
+
